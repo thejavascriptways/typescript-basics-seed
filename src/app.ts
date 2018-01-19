@@ -7,4 +7,3 @@ const mappedPizzas = pizzas.map((pizzas, topping) =>  pizzas.name.toLowerCase())
 
 
 console.log(mappedPizzas);
-console.log(mappedPizzas);
