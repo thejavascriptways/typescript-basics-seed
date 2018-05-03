@@ -1,11 +1,23 @@
+interface Pizza{
+    name: string;
+    sizes: string[];
+    getAvailableSizes(): string[]
+}
 
-let pizza : { name : string, price: number , getName(): string} = {
+let pizza : Pizza;
 
-    name: 'Veg pizza',
-    price: 25,
-    getName(){
-        return pizza.name
-    }
-};
+function createPizza(name: string, sizes: string[]) : Pizza {
+    return{
+        name,
+        sizes,
+        getAvailableSizes(){
+            return this.sizes;
+        }
+    };
+}
 
-console.log(pizza.getName());
+pizza = createPizza('veg garden fresh', ['S', 'M', 'L', 'XL']);
+
+console.log(pizza.name);
+console.log(pizza.sizes);
+console.log(pizza.getAvailableSizes());
