@@ -1,9 +1,11 @@
-const pizzas =[
-    { name : "pepperoni", toppings : ['pepperoni', 'cheese']}
-];
 
-const mappedPizzas = pizzas.map((pizzas, topping) =>  pizzas.name.toLowerCase());
+let pizza : { name : string, price: number , getName(): string} = {
 
+    name: 'Veg pizza',
+    price: 25,
+    getName(){
+        return pizza.name
+    }
+};
 
-
-console.log(mappedPizzas);
+console.log(pizza.getName());
