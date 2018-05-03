@@ -1,6 +1,9 @@
-interface Pizza{
-    name: string;
+interface sizes {
     sizes: string[];
+}
+
+interface Pizza extends sizes{
+    name: string;
     getAvailableSizes(): string[]
 }
 
