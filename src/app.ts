@@ -1,6 +1,6 @@
-class Sizes {
+abstract class Sizes {
 
-    constructor(public sizes: string[]){};
+    constructor(protected sizes: string[]){};
     
     set availableSizes(sizes: string[]) {
          this.sizes =sizes;
@@ -27,6 +27,10 @@ class Pizza extends Sizes{
         this.toppings.push(topping);
     }
 
+    updateSizes(sizes: string[]){
+        this.sizes = sizes;
+    }
+
     removeToppings(){
         this.toppings.pop();
     }
@@ -46,4 +50,8 @@ pizza.addToppings('Tomatoes');
 pizza.addToppings('Olives');
 
 console.log(pizza);
+
+pizza.updateSizes(['JUMBO', "DADDY JUMBO"]);
+console.log(pizza);
+
 
